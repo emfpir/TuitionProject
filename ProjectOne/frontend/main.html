@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tution Reimbursement Access Hub</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        body{
+            background-color: rgb(166, 176, 179);
+        }
+    </style>
+</head>
+<body>
+    <h1>Tuition Reimbursement Request Page</h1>
+    <p>(Make sure to check your active requests often. Many need additional data before approval.)</p>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Active Requests</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Closed Requests</a>
+            </li>
+            <!-- add "disable" to class to make the link disabled -->
+            <li class="nav-item">
+                <a class="nav-link" href="#">Managed Active Requests</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Manged Closed Requests</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="authorization.html">Sign out</a>
+              </li>
+          </ul>
+        </div>
+      </nav>
+
+
+      <div id="tuitionForm">
+          <h2>Submit Tuition Reimbursement Form</h2>
+          <p>Fill out the form as soon as possible to allow for review process.</p> 
+          <div class="form-row">
+          <!-- <fieldset disabled> -->
+         
+            <div class="form-group row form-inline col-md-10">
+              <label for="disabledTextInput">Tuition Reimbursement available</label>
+              <div class="col-md-6">
+              <input type="text" id="tuitionAvailable" class="form-control form-inline" placeholder=0.00 disabled>
+            </div>         
+            </div>
+            <!-- </fieldset> -->
+        </div>
+
+          <div class="col-auto my-1">
+            <label class="mr-sm-2 sr-only" for="educationType">Preference</label>
+            <select class="custom-select mr-sm-2" id="educationType">
+              <option selected>Education Type</option>
+              <option value="1">University Course</option>
+              <option value="2">Seminars</option>
+              <option value="3">Certification Preparation Class</option>
+              <option value="4">Certification</option>
+              <option value="5">Technical Training</option>
+              <option value="6">Other</option>
+            </select>
+          </div>
+        </div>       
+        <div class="form-group row">
+            <label for="training_location" class="col-sm-2 col-form-label">Location</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="training_location" placeholder="City, State">
+            </div>
+          </div>       
+          <div class="form-row">
+            <div class="form-group form-inline col-md-2">
+              <label for="inputYear">Year</label>
+              <select id="inputYear" class="form-control">
+                <option selected>Choose...</option>
+                <option value="2021">2021</option>
+                <option value="2022">2022</option>
+                <option value="2023">2023</option>
+                <option value="2024">2024</option>
+                <option value="2025">2025</option>
+              </select>
+            </div>
+            <div class="form-group form-inline col-md-2">
+              <label for="inputMonth">Month</label>
+              <select id="inputMonth" class="form-control">
+                <option selected>Choose...</option>
+                <option value="01">1</option>
+                <option value="02">2</option>
+                <option value="03">3</option>
+                <option value="04">4</option>
+                <option value="05">5</option>
+                <option value="06">6</option>
+                <option value="07">7</option>
+                <option value="08">8</option>
+                <option value="09">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+              </select>
+            </div>
+            <div class="form-group form-inline col-md-2">
+              <label for="inputDay">Day</label>
+              <select id="inputDay" class="form-control">
+                <option selected>Choose...</option>
+                <option value="01">1</option>
+                <option value="02">2</option>
+                <option value="03">3</option>
+                <option value="04">4</option>
+                <option value="05">5</option>
+                <option value="06">6</option>
+                <option value="07">7</option>
+                <option value="08">8</option>
+                <option value="09">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19<option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+                <option value="24">24</option>
+                <option value="25">25</option>
+                <option value="26">26</option>
+                <option value="27">27</option>
+                <option value="28">28</option>
+                <option value="29">29</option>
+                <option value="30">30</option>
+                <option value="31">31</option>                           
+              </select>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="totalLength" class="col-sm-2 col-form-label">Length in days</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="totalLength" placeholder="0.00">
+            </div>
+          </div>       
+          <div class="mb-3">
+            <label for="descriptionArea">Detailed Description</label>
+            <textarea class="form-control" id="descriptionArea" placeholder="Details about expected course work." required></textarea>
+    
+          </div> <div class="mb-3">
+            <label for="workJustification">Work Justication</label>
+            <textarea class="form-control" id="workJustification" placeholder="The expected value of the education that will benefit your professional development." required></textarea>
+   
+          </div>
+          <div class="form-group row">
+            <label for="totalCost" class="col-sm-2 col-form-label">Cost of the training </label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="totalCost" placeholder="0.00">
+            </div>
+          </div>       
+          <div class="form-check form-check-inline">
+              <!-- <label for="form-check-input">Is the course graded?  <span> </span> </label> -->
+          <div class="form-inline">
+              <p style="padding-right: 15px;">Is the course graded? </p>
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value=true >
+            <label class="form-check-label" for="inlineRadio1">Yes</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value=false >
+            <label class="form-check-label" for="inlineRadio2">No</label>
+          </div>
+        </div>
+          <div class="form-group row">
+            <label for="passingGrade" class="col-sm-2 col-form-label">If yes</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="passingGrade" placeholder="enter passing score">
+            </div>
+          </div>
+          <div class="custom-file">
+            <input type="file" id="documentUploader" class="custom-file-input" id="documentUpload" accept=".pdf,.jpeg,.txt,.doc"> 
+            <!-- <label class="custom-file-label" for="documentUpload">Supporting Documents</label> -->
+            <!-- <div class="invalid-feedback">Only submit 'pdf', 'jpeg', 'txt', and 'doc' files.</div> -->
+          </div>
+          <button class="btn btn-primary" onClick="createRTForm()" type="button">Submit form</button>
+      </div>
+
+
+
+</body>
+
+<script>    
+window.onload = function() {
+    let formatter = new Intl.NumberFormat('en-US', {style: 'currency', currency: 'USD',
+  });
+  let rt_available = localStorage.getItem("availableReimbursement")
+  // formatter.format(rt_available);
+  // console.log(localStorage.getItem("availableReimbursement"))
+  // document.getElementById("tuitionAvailable").placeholder = localStorage.getItem("availableReimbursement")
+  document.getElementById("tuitionAvailable").placeholder =  formatter.format(rt_available)
+    // document.getElementById("tuitionAvailable").placeholder = Intl.NumberFormat('en-US', {style: 'currency',currency:'localStorage.getItem("availableReimbursement")'}).format(monetary_value);
+
+}
+
+
+
+
+//     const input = document.querySelector('input[type="file"]')
+//     input.addEventListener('change', function (e) {
+//         console.log(input.files)
+//         const reader = new FileReader()
+//         reader.onload = function () {
+//         console.log("12",reader.result)
+//         const fileType = input.files[0].name
+//         const fileName = input.files[0].type
+//         console.log(fileName,fileType)
+//     }
+//     reader.(input.files[0])
+// }, false)
+
+// const input = document.querySelector('input[type="file"]')
+// let files = fileInput.files
+// let accept = { 
+//     binary : ["image/jpeg", "text/plain"]
+// }
+
+
+
+
+function createRTForm() { 
+    // console.log(localStorage.getItem("name"));
+    // let tuitionAvailable = document.getElementById("tuitionAvailable").value
+    // console.log(tuitionAvailable)
+
+    let educationType = document.getElementById("educationType")
+    let inputYear = document.getElementById("inputYear")
+    let inputMonth = document.getElementById("inputMonth")
+    let inputDay = document.getElementById("inputDay")
+    let educationTypeValue =educationType.value
+    console.log(educationTypeValue,"here")
+    let inputYearValue = inputYear.value
+    let inputMonthValue = inputMonth.value
+    let inputDayValue = inputDay.value
+    console.log(educationTypeValue,inputYearValue,inputDayValue,inputMonthValue)
+    let startDateFinal = inputYearValue+'-'+inputMonthValue+'-'+inputDayValue
+    console.log(startDateFinal)
+
+    var gradedBoolean
+    let radios = document.getElementsByName("inlineRadioOptions");
+    for (let i=0, length=radios.length; i<length;i++){
+        if(radios[i].checked){
+            gradedBoolean=radios[i].value
+        }        
+    }
+    // let passingGrade = document.getElementById("passingGrade").value
+    // console.log(passingGrade)
+
+    console.log(gradedBoolean)
+ 
+    // let documentUpload = document.getElementById("documentUpload").value
+    // console.log(input.files)
+    // console.log(documentUpload)
+    let training_location = document.getElementById("training_location").value 
+
+    let totalLength = document.getElementById("totalLength").value
+    let descriptionArea = document.getElementById("descriptionArea").value
+    let workBenefit = document.getElementById("workJustification").value
+    let totalCost = document.getElementById("totalCost").value
+    let dateHolder = new Date()
+    let currentDate
+    if(dateHolder.getMonth.length==1 && dateHolder.getDay.length==1){
+        currentDate = dateHolder.getFullYear+'-'+'0'+dateHolder.getMonth+'-'+'0'+dateHolder.getDay
+    }
+    else if (dateHolder.getMonth.length==1){
+        currentDate = dateHolder.getFullYear+'-'+'0'+dateHolder.getMonth+'-'+dateHolder.getDay
+    }
+    else if (dateHolder.getDay.length==1){
+        currentDate = dateHolder.getFullYear+'-'+dateHolder.getMonth+'-'+'0'+dateHolder.getDay
+    }
+    console.log(currentDate)
+    let passingGrade = document.getElementById("passingGrade").value
+    if (!passingGrade){null}
+    console.log( training_location,  totalLength, descriptionArea, workJustification, totalCost, passingGrade)
+    let xCreateTR = new XMLHttpRequest();
+    xCreateTR.onreadystatechange = function () {
+        if(this.status == 202 && this.readyState ==4){
+            alert("Request was successfully submittted.")
+            window.location.href = "file:///C:/Users/D/Documents/Revature/revature%20training/Project1/main.html"
+        }
+        else if (this.readyState == 4) {
+            alert("error occured")
+        }
+    };
+    let verifyManager = localStorage.getItem("directSupervisor")
+    if (verifyManager==0 || verifyManager==null){
+      verifyManager = localStorage.getItem("departmentHead")
+      if(verifyManager==0 || verifyManager==null){
+        verifyManager = 1
+      }
+    }
+   
+  //  xCreateTR.onreadystatechange = function () {
+  //    if(this.status == 202 && this.readyState == 4){
+  //      let tr_form_created = JSON.parse(this.responseText)
+  //      window.open(href="file:///C:/Users/D/Documents/Revature/revature%20training/Project1/main.html")   
+  //    }
+  //  }
+    url = "http://localhost:5000/createRT"
+    xCreateTR.open("POST", url, true)
+
+    let tuitionReimbursement = {
+      dateCurrent: currentDate,
+      trainingLocation: training_location,
+      description: descriptionArea,
+      fullCost: totalCost,
+      workJustification: workBenefit,
+      startDate: startDateFinal,
+      daysLong: totalLength,
+      employeeId: localStorage.getItem("employeeId"),
+      educationTypeId: {
+          gradingTypeId: "0 ",
+          graded: gradedBoolean,
+          score : passingGrade,
+          trInstanceId : educationTypeValue
+      }}
+    
+    xCreateTR.setRequestHeader('Content-Type', 'application/json')
+    xCreateTR.send(JSON.stringify(tuitionReimbursement));
+}
+
+
+
+
+
+
+
+
+
+    // this uploads the file to python
+    // const inputFile = document.querySelector('input[type="file"]');
+    // const buttonUpload = document.getElementById("documentUploader");
+
+    // buttonUpload.addEventListener("click", function () {
+    // const xRequest = new XMLHttpRequest();
+    // const formData = new FormData();
+    // formData = inputFile.files
+    // url = "http://localhost:5000/fileUpload"
+
+    // xRequest.open("POST",url, true)
+    // xRequest.setRequestHeader('Content-Type', 'application/json')
+    // xRequest.send(formData);
+
+    function authorizeEmployee() {
+      let employeeName = document.getElementById("name").value;
+      let employeeTitle = document.getElementById("title").value;
+      console.log("employee <name>"+employeeName+" <title> "+employeeTitle)
+  
+      let xRequest = new XMLHttpRequest();
+  
+      xRequest.onreadystatechange = function () {
+        if(this.status == 202){
+          console.log("good response. I need to launch main.html")
+          console.log(this.responseText)
+          document.open()
+        }
+        else {
+          // alert("User input not found.")
+        }
+      };
+  
+      url = "http://localhost:5000/authentication"
+      xRequest.open("POST", url, true)
+  
+      // url = "http://localhost:5000/get"
+      // xRequest.open("GET", url, true);
+      // xRequest.send()
+      let employee = {
+        name: employeeName,
+        title: employeeTitle
+      }
+      xRequest.setRequestHeader('Content-Type', 'application/json')
+      xRequest.send(JSON.stringify(employee));
+  
+    }
+  </script>
+  
+
+
+</html>

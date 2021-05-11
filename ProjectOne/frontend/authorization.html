@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Tution Reimbursement Access Portal</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+</head>
+<body>
+
+<div class="container">
+  <h2>Tution Reimbursement Authorization</h2>
+    <div class="form-group">
+      <label for="name">Name: </label>
+      <input type="text" class="form-control" id="name" placeholder="Enter name" name="name">
+    </div>
+    <div class="form-group">
+      <label for="title">Title:</label>
+      <input type="text" class="form-control" id="title" placeholder="Enter title" name="title">
+    </div>
+    <button id="authorizeButton" onClick="authorizeEmployee()"  class="btn btn-primary">Submit</button>
+</div>
+
+</body>
+<script>
+  function authorizeEmployee() {
+    let employeeName = document.getElementById("name").value;
+    let employeeTitle = document.getElementById("title").value;
+    console.log("employee <name>"+employeeName+" <title> "+employeeTitle)
+
+    let xRequest = new XMLHttpRequest();
+
+    xRequest.onreadystatechange = function () {
+      if(this.status == 202 && this.readyState == 4){
+        let employee = JSON.parse(this.responseText)
+        localStorage.setItem("name",employee["name"])
+        localStorage.setItem("availableReimbursement",employee["availableReimbursement"])
+        localStorage.setItem("departmentHead",employee["departmentHead"])
+        localStorage.setItem("directSupervisor",employee["directSupervisor"])
+        localStorage.setItem("employeeId",employee["employeeId"])
+        localStorage.setItem("title",employee["title"])
+        window.location.href = "file:///C:/Users/D/Documents/Revature/revature%20training/Project1/main.html"
+        // window.open(href="file:///C:/Users/D/Documents/Revature/revature%20training/Project1/main.html")
+
+      }
+      else if (this.readyState == 4 ) {
+        alert("User input not found.")
+      }
+    };
+
+    url = "http://localhost:5000/authentication"
+    xRequest.open("POST", url, true)
+
+    let employee = {
+      name: employeeName,
+      title: employeeTitle
+    }
+    xRequest.setRequestHeader('Content-Type', 'application/json')
+    xRequest.send(JSON.stringify(employee));
+    
+  }
+</script>
+
+</html>
