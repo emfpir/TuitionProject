@@ -4,11 +4,11 @@ from psycopg2 import OperationalError
 def create_connection():
     try:
         conn = psycopg2.connect(
-            database='postgres',
-            user='charles',
-            password='passwordnotnothe',
-            host='charles432postgres.cflalptztkhk.us-east-2.rds.amazonaws.com',
-            port='5432'
+            database='',
+            user='',
+            password='',
+            host='',
+            port=''
         )
         return conn
     except OperationalError as e:
