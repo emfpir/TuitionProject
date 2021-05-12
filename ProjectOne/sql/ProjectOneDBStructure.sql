@@ -1,4 +1,4 @@
-drop table employee, tr_instance, grading_type, education_type, process, grading
+drop table employee;, tr_instance, grading_type, education_type, process, grading
 
 
 create table employee (
@@ -25,6 +25,13 @@ VALUES
 (11, 'Kyle', 9, 3, DEFAULT, 'Human Resources Employee'),
 (12, 'Lee', 6, 2, DEFAULT, 'Accounting Employee'),
 (13, 'Matthew', 5, 4, DEFAULT, 'Operations Employee');
+
+
+
+select * from employee;
+select employee_name, title from employee
+
+
 insert into tr_instance (date_current, training_location, description, full_cost, work_justification, start_date, days_long, education_type_id, employee_id)
 values
 ('2021-05-02')
@@ -35,8 +42,6 @@ values
 
 
 
-
-select * from employee;
 
 
 
